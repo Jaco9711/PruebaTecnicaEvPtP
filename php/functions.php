@@ -37,8 +37,20 @@ function preparejson($reference,$description,$currency,$total){
                   "currency": "'.$currency.'",
                   "total": '.$total.'
             }
-          },
-          "expiration": "'.$expiration.'",
+          },'; 
+          /*******PERSONAL DATA****** */
+          if ($personal == true && !empty($personal)){
+          $json = $json.'"payer": {
+            "document": "'.$document.'",
+            "documentType": "'.$documentType.'",
+            "name": "'.$name.'",
+            "surname": "'.$surname.'",
+            "email": "'.$email.'",
+            "mobile": "+57'.$mobile.'"
+            },'; 
+        }
+        $json= $json.
+        '"expiration": "'.$expiration.'",
           "returnUrl": "'.$returnUrl.'",
           "ipAddress": "127.0.0.1",
           "userAgent": "PlacetoPay Sandbox"

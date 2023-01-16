@@ -17,5 +17,13 @@ $secretkey='iQhxZqnRbJe';
 $expiration = strtotime ( '+17 minute' , strtotime ($seed) ) ; 
 $expiration = date ( 'c' , $expiration); 
 
+/***********DATOS DE USUARIO OPCIONALES para no diligenciar en la pasarela****************** */
+$personal=false; // true - false en caso de false se manda la peticion sencilla  
+$document = '1000435000';
+$documentType = 'CC';
+$name = 'Jhonatan';
+$surname = 'Castillo';
+$email = 'jaco9711@gmail.com';
+$mobile = '3182222232';
 
 ?>
