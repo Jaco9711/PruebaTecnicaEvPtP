@@ -39,7 +39,7 @@ curl_close($ch);
     </form> 
     <!--POR SI SE DESEA VOLVER A LA PASARELA DE PAGO ACTUALMENTE ACTIVA--->
     <?php
-    if (!empty($_SESSION["urlPay"] && $data['status']['status'] !='REJECTED')){
+    if ((!empty($_SESSION["urlPay"] && $data['status']['status'] !='REJECTED') && $data['payment'][0]['status']['status'] != 'APPROVED')){
     echo "<a href='".$_SESSION['urlPay']."' target='_blank'<button class='btn btn-info'>volver a la pasarela.</button><a/>";
     }
     ?>
