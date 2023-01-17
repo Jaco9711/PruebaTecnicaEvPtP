@@ -44,7 +44,6 @@ include '../payment.php';
 }else{
 /************SI SE PRESENTA ERROR EN LA PETICION SE DEVUELVE AL INICIO INDICANDO EL ERROR***************/
      echo $data['status']['status'].' | '.$data['status']['message'];
-     //echo error_procesar();
        
     }
     

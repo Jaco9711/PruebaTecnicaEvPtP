@@ -21,16 +21,9 @@
    
   <!--SCRIPT ABRE UNA NUEVA VENTANA CON EL LINK DE PAGO ENTREGADO POR PLACETOPAY-->
      <script>
-      function abrirNuevoTab(url) {
-        // Abrir nuevo tab
-        var win = window.open(url, '_blank');
-        // Cambiar el foco al nuevo tab (punto opcional)
-        win.focus();
-      }
+
       $('#open').click(function(){
-        abrirNuevoTab('<?=$_SESSION['urlPay']?>')
-        
-        location.replace("../");
+            window.location.assign('<?=$_SESSION['urlPay']?>');
       })
      </script> 
     
